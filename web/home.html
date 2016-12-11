@@ -1,0 +1,75 @@
+<html>
+
+<head>
+	<title>SOAP DB</title>
+	<style>
+	body {
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		color: white;
+		background-image: linear-gradient(
+	    to right top,
+	    transparent 33%,
+	    black 33%,
+	    black 66%,
+	    transparent 66%
+		);
+		background-size: 3px 3px;
+	}
+	input {
+		border-radius: 5px;
+	}
+	input[type="submit"] {
+		font-size: 12pt;
+		color: white;
+		background-color: red;
+		width: 100px;
+		border: 3px solid white;
+	}
+	div {
+		width: 50%; 
+		margin: 0 auto; 
+		border: 6px solid red; 
+		padding: 20px; 
+		border-radius: 20px; 
+		background: #0052A5;
+	}
+	</style>
+</head>
+<body>
+<div>
+<center><img src="static/logo.jpg" width=400px>
+<h1>SOAP DB</h1></center>
+<hr>
+<br>
+<h3>Run a SQL Query</h3>
+
+<form action="http://localhost:8080/dbSel" method="post">
+<input type="text" name="qry" placeholder=" Input a SQL Query" style="width: 400px; height: 40px; margin-bottom: 10px;"><br>
+SELECT, INSERT, and DELETE are allowed. <br><br>
+<input type="submit" value="Run">
+</form>
+<br><br>
+
+<h3>Clear Tables</h3>
+
+<form action="http://localhost:8080/dbClrConfirm" method="post">
+<input type="submit" value="Go">
+</form>
+<br><br>
+
+<h3>Load a CSV File</h3>
+
+<form action="http://localhost:8080/dbFilConfirm" method="post">
+<input type="submit" value="Go">
+</form>
+<br><br>
+
+<h3>View Diagrams</h3>
+
+<form action="http://localhost:8080/diagrams" method="post">
+<input type="submit" value="Go">
+</form>
+<br><br>
+</div>
+</body>
+</html>

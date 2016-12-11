@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:first-child { 
+	font-weight: bold;
+	background-color: #0052A5;;
+	color: white;
+}
+</style>
+	<title>SOAP DB</title>
+</head>
+
+<body>
+<center><h1>Result</h1>
+<table style="width:50%"> 
+%for row in data:
+	<tr>
+	%for col in row:
+	<td>{{col}}</td>
+	%end
+	</tr>
+%end
+</table>
+<br>
+Returned {{rows}} rows. 
+<br><br>
+<a href="http://localhost:8080/">Home</a>
+</center>
+</body>
+</html>
